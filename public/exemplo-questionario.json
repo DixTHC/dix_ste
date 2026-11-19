@@ -1,0 +1,60 @@
+{
+  "id": "levantamento-inicial",
+  "title": "Levantamento inicial",
+  "description": "Contexto para planejar a próxima etapa do projeto.",
+  "questions": [
+    {
+      "id": "q_objetivo",
+      "type": "single",
+      "title": "Qual objetivo é prioritário?",
+      "description": "Selecione o objetivo mais importante neste momento.",
+      "required": true,
+      "options": [
+        { "id": "opt_velocidade", "label": "Entregar mais rápido" },
+        { "id": "opt_confiabilidade", "label": "Aumentar confiabilidade" },
+        { "id": "opt_custo", "label": "Reduzir custos" },
+        { "id": "opt_escala", "label": "Preparar para escalar" }
+      ]
+    },
+    {
+      "id": "q_ferramentas",
+      "type": "multiple",
+      "title": "Quais ferramentas a equipe já utiliza?",
+      "required": false,
+      "options": [
+        { "id": "opt_git", "label": "Git" },
+        { "id": "opt_docker", "label": "Docker" },
+        { "id": "opt_ci", "label": "CI/CD (GitHub Actions, GitLab CI, etc.)" },
+        { "id": "opt_monitoring", "label": "Monitoramento (Datadog, Grafana, etc.)" },
+        { "id": "opt_docs", "label": "Documentação viva (Notion, Confluence, etc.)" }
+      ]
+    },
+    {
+      "id": "q_satisfacao",
+      "type": "scale",
+      "title": "Qual o nível de satisfação com o processo atual?",
+      "description": "De 1 (muito insatisfeito) a 10 (muito satisfeito).",
+      "required": true,
+      "min": 1,
+      "max": 10,
+      "minLabel": "Muito insatisfeito",
+      "maxLabel": "Muito satisfeito"
+    },
+    {
+      "id": "q_tem_prazo",
+      "type": "boolean",
+      "title": "Existe um prazo definido para a próxima entrega?",
+      "required": true,
+      "yesLabel": "Sim, temos prazo",
+      "noLabel": "Não, é flexível"
+    },
+    {
+      "id": "q_contexto",
+      "type": "text",
+      "title": "Descreva o contexto atual do projeto",
+      "description": "Inclua informações relevantes sobre o estágio, desafios e expectativas.",
+      "required": false,
+      "placeholder": "Ex: Estamos na fase de MVP, com 3 desenvolvedores e prazo de 2 meses..."
+    }
+  ]
+}
